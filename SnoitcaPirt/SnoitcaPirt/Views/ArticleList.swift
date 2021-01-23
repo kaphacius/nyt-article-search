@@ -18,7 +18,7 @@ struct ArticleList: View {
                 SearchBar(searchString: $vm.query)
                 ForEach(vm.articles) { article in
                     NavigationLink(
-                        destination: Text(article.headline),
+                        destination: ArticleDetailsPage(vm: article),
                         tag: article.id,
                         selection: $selectedIdx
                     ) {

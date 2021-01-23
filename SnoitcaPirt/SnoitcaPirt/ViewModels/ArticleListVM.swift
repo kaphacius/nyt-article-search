@@ -10,11 +10,13 @@ import Combine
 
 struct ArticleVM: Identifiable, Equatable {
     let headline: String
+    let url: URL?
     let id: String
 
     init(article: Article) {
         self.headline = article.headline
         self.id = article.id
+        self.url = URL(string: article.webUrl)
     }
 }
 

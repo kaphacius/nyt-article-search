@@ -23,6 +23,7 @@
 		822709A825BC606100CE1BFF /* ArticleListVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822709A725BC606100CE1BFF /* ArticleListVMTests.swift */; };
 		822709AF25BC68B500CE1BFF /* ArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822709AE25BC68B500CE1BFF /* ArticleList.swift */; };
 		822709B525BC698C00CE1BFF /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822709B425BC698C00CE1BFF /* SearchBar.swift */; };
+		822709B925BC825C00CE1BFF /* ArticleDetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822709B825BC825C00CE1BFF /* ArticleDetailsPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		822709A725BC606100CE1BFF /* ArticleListVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListVMTests.swift; sourceTree = "<group>"; };
 		822709AE25BC68B500CE1BFF /* ArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleList.swift; sourceTree = "<group>"; };
 		822709B425BC698C00CE1BFF /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		822709B825BC825C00CE1BFF /* ArticleDetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			children = (
 				822709AE25BC68B500CE1BFF /* ArticleList.swift */,
 				822709B425BC698C00CE1BFF /* SearchBar.swift */,
+				822709B825BC825C00CE1BFF /* ArticleDetailsPage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			files = (
 				8227098425BC33F200CE1BFF /* Articles.swift in Sources */,
 				8227096D25BC316B00CE1BFF /* Network.swift in Sources */,
+				822709B925BC825C00CE1BFF /* ArticleDetailsPage.swift in Sources */,
 				822709AF25BC68B500CE1BFF /* ArticleList.swift in Sources */,
 				822709A325BC44DB00CE1BFF /* ArticleListVM.swift in Sources */,
 				8227096725BC2DC700CE1BFF /* Article.swift in Sources */,
