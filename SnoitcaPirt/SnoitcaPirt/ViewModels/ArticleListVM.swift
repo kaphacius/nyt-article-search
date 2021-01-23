@@ -40,8 +40,9 @@ class ArticleListVM: ObservableObject {
     func setUpSearch() {
         $query
             .subscribe(on: DispatchQueue.global())
+            .filter({ $0.count > 2 })
+            .debounce(for: 0.2, scheduler: DispatchQueue.global())
             .removeDuplicates()
-            .debounce(for: 0.3, scheduler: DispatchQueue.global())
             .sink(receiveValue: { [weak self] q in
                 self?.loadingSubject.send(SubjectInput(query: q, nextPage: false))
             }).store(in: &cancellables)
