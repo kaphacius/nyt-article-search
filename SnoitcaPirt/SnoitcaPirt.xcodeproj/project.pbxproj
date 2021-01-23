@@ -19,6 +19,8 @@
 		8227098425BC33F200CE1BFF /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227098325BC33F200CE1BFF /* Articles.swift */; };
 		8227098C25BC3BCC00CE1BFF /* ArticlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227098B25BC3BCC00CE1BFF /* ArticlesTests.swift */; };
 		8227099125BC3BEC00CE1BFF /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227099025BC3BEC00CE1BFF /* TestHelpers.swift */; };
+		822709A325BC44DB00CE1BFF /* ArticleListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822709A225BC44DB00CE1BFF /* ArticleListVM.swift */; };
+		822709A825BC606100CE1BFF /* ArticleListVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822709A725BC606100CE1BFF /* ArticleListVMTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		8227098B25BC3BCC00CE1BFF /* ArticlesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTests.swift; sourceTree = "<group>"; };
 		8227099025BC3BEC00CE1BFF /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		8227099C25BC445000CE1BFF /* SnoitcaPirt.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SnoitcaPirt.xctestplan; sourceTree = "<group>"; };
+		822709A225BC44DB00CE1BFF /* ArticleListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListVM.swift; sourceTree = "<group>"; };
+		822709A725BC606100CE1BFF /* ArticleListVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListVMTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +95,10 @@
 		8227092E25BC2D4100CE1BFF /* SnoitcaPirt */ = {
 			isa = PBXGroup;
 			children = (
-				8227098225BC33CC00CE1BFF /* DataSource */,
+				8227098225BC33CC00CE1BFF /* DataSources */,
 				8227096B25BC316100CE1BFF /* Network */,
 				8227095D25BC2D5500CE1BFF /* Models */,
+				8227099F25BC44B900CE1BFF /* ViewModels */,
 				8227092F25BC2D4100CE1BFF /* SnoitcaPirtApp.swift */,
 				8227093125BC2D4100CE1BFF /* ContentView.swift */,
 				8227093325BC2D4300CE1BFF /* Assets.xcassets */,
@@ -116,6 +121,7 @@
 			children = (
 				8227094325BC2D4300CE1BFF /* Info.plist */,
 				8227098B25BC3BCC00CE1BFF /* ArticlesTests.swift */,
+				822709A725BC606100CE1BFF /* ArticleListVMTests.swift */,
 				8227099025BC3BEC00CE1BFF /* TestHelpers.swift */,
 			);
 			path = SnoitcaPirtTests;
@@ -140,12 +146,20 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		8227098225BC33CC00CE1BFF /* DataSource */ = {
+		8227098225BC33CC00CE1BFF /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
 				8227098325BC33F200CE1BFF /* Articles.swift */,
 			);
-			path = DataSource;
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		8227099F25BC44B900CE1BFF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				822709A225BC44DB00CE1BFF /* ArticleListVM.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +263,7 @@
 			files = (
 				8227098425BC33F200CE1BFF /* Articles.swift in Sources */,
 				8227096D25BC316B00CE1BFF /* Network.swift in Sources */,
+				822709A325BC44DB00CE1BFF /* ArticleListVM.swift in Sources */,
 				8227096725BC2DC700CE1BFF /* Article.swift in Sources */,
 				8227097A25BC327000CE1BFF /* ArticleSearchResource.swift in Sources */,
 				8227095F25BC2D6D00CE1BFF /* NYTResponse.swift in Sources */,
@@ -263,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8227098C25BC3BCC00CE1BFF /* ArticlesTests.swift in Sources */,
+				822709A825BC606100CE1BFF /* ArticleListVMTests.swift in Sources */,
 				8227099125BC3BEC00CE1BFF /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,6 +27,32 @@ class MockNetwork: Network {
     }
 }
 
+class MockArticles: Articles {
+    var lastQuery: String? = nil
+    var responses = [[Article]]()
+    var requestNumber = 0
+
+    init(responses: [[Article]]) {
+        self.responses = responses
+        super.init(network: MockNetwork(responses: []))
+    }
+
+    override func searchArticles(with query: String) -> NPublisher<Array<Article>> {
+        lastQuery = query
+        let response = responses[requestNumber]
+        requestNumber += 1
+
+        return Just(.success(response)).eraseToAnyPublisher()
+    }
+
+    override func loadNextPage() -> NPublisher<Array<Article>> {
+        let response = responses[requestNumber]
+        requestNumber += 1
+
+        return Just(.success(response)).eraseToAnyPublisher()
+    }
+}
+
 extension XCTest {
     func expectToEventually(
         _ test: @autoclosure () -> Bool,
@@ -43,4 +69,19 @@ extension XCTest {
 
         XCTFail(message)
     }
+}
+
+func articlesResponse(hits: Int = 0, offset: Int = 0) -> NYTResponse<Article> {
+    return NYTResponse<Article>(
+        status: "200",
+        copyright: "foo",
+        response: NYTResponse.Response(
+            docs: [mockArticle, mockArticle, mockArticle],
+            meta: NYTResponse.Response.Meta(hits: hits, offset: offset)
+        )
+    )
+}
+
+var mockArticle: Article {
+    Article(headline: "foo", webUrl: "bar", thumbnailUrl: "baz")
 }

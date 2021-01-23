@@ -14,20 +14,29 @@ struct Article: Decodable {
         case headline
         case main
         case multimedia
+        case id = "_id"
     }
 
     let headline: String
     let webUrl: String
     let thumbnailUrl: String?
+    let id: String
 
-    internal init(headline: String, webUrl: String, thumbnailUrl: String?) {
+    internal init(
+        headline: String,
+        webUrl: String,
+        thumbnailUrl: String?,
+        id: String = UUID().uuidString
+    ) {
         self.headline = headline
         self.webUrl = webUrl
         self.thumbnailUrl = thumbnailUrl
+        self.id = id
     }
 
     init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
+        id = try c.decode(String.self, forKey: .id)
         webUrl = try c.decode(String.self, forKey: .webUrl)
 
         let headlineC = try c.nestedContainer(keyedBy: CodingKeys.self, forKey: .headline)
