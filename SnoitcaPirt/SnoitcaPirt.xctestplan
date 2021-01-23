@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "E2CAFE3D-7A8E-47CE-AE8A-5D2435AA80CD",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:SnoitcaPirt.xcodeproj",
+      "identifier" : "8227092B25BC2D4100CE1BFF",
+      "name" : "SnoitcaPirt"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:SnoitcaPirt.xcodeproj",
+        "identifier" : "8227093C25BC2D4300CE1BFF",
+        "name" : "SnoitcaPirtTests"
+      }
+    }
+  ],
+  "version" : 1
+}

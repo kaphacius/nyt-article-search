@@ -11,24 +11,18 @@
 		8227093225BC2D4100CE1BFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227093125BC2D4100CE1BFF /* ContentView.swift */; };
 		8227093425BC2D4300CE1BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8227093325BC2D4300CE1BFF /* Assets.xcassets */; };
 		8227093725BC2D4300CE1BFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8227093625BC2D4300CE1BFF /* Preview Assets.xcassets */; };
-		8227094225BC2D4300CE1BFF /* SnoitcaPirtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227094125BC2D4300CE1BFF /* SnoitcaPirtTests.swift */; };
-		8227094D25BC2D4300CE1BFF /* SnoitcaPirtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227094C25BC2D4300CE1BFF /* SnoitcaPirtUITests.swift */; };
 		8227095F25BC2D6D00CE1BFF /* NYTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227095E25BC2D6D00CE1BFF /* NYTResponse.swift */; };
 		8227096725BC2DC700CE1BFF /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227096625BC2DC700CE1BFF /* Article.swift */; };
 		8227096D25BC316B00CE1BFF /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227096C25BC316B00CE1BFF /* Network.swift */; };
 		8227097525BC31FF00CE1BFF /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227097425BC31FF00CE1BFF /* Resource.swift */; };
 		8227097A25BC327000CE1BFF /* ArticleSearchResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227097925BC327000CE1BFF /* ArticleSearchResource.swift */; };
+		8227098425BC33F200CE1BFF /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227098325BC33F200CE1BFF /* Articles.swift */; };
+		8227098C25BC3BCC00CE1BFF /* ArticlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227098B25BC3BCC00CE1BFF /* ArticlesTests.swift */; };
+		8227099125BC3BEC00CE1BFF /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227099025BC3BEC00CE1BFF /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		8227093E25BC2D4300CE1BFF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8227092425BC2D4100CE1BFF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8227092B25BC2D4100CE1BFF;
-			remoteInfo = SnoitcaPirt;
-		};
-		8227094925BC2D4300CE1BFF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8227092425BC2D4100CE1BFF /* Project object */;
 			proxyType = 1;
@@ -45,16 +39,16 @@
 		8227093625BC2D4300CE1BFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8227093825BC2D4300CE1BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8227093D25BC2D4300CE1BFF /* SnoitcaPirtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnoitcaPirtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8227094125BC2D4300CE1BFF /* SnoitcaPirtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnoitcaPirtTests.swift; sourceTree = "<group>"; };
 		8227094325BC2D4300CE1BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8227094825BC2D4300CE1BFF /* SnoitcaPirtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnoitcaPirtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8227094C25BC2D4300CE1BFF /* SnoitcaPirtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnoitcaPirtUITests.swift; sourceTree = "<group>"; };
-		8227094E25BC2D4300CE1BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8227095E25BC2D6D00CE1BFF /* NYTResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTResponse.swift; sourceTree = "<group>"; };
 		8227096625BC2DC700CE1BFF /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		8227096C25BC316B00CE1BFF /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		8227097425BC31FF00CE1BFF /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		8227097925BC327000CE1BFF /* ArticleSearchResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSearchResource.swift; sourceTree = "<group>"; };
+		8227098325BC33F200CE1BFF /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
+		8227098B25BC3BCC00CE1BFF /* ArticlesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTests.swift; sourceTree = "<group>"; };
+		8227099025BC3BEC00CE1BFF /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		8227099C25BC445000CE1BFF /* SnoitcaPirt.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SnoitcaPirt.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,22 +66,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8227094525BC2D4300CE1BFF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8227092325BC2D4100CE1BFF = {
 			isa = PBXGroup;
 			children = (
+				8227099C25BC445000CE1BFF /* SnoitcaPirt.xctestplan */,
 				8227092E25BC2D4100CE1BFF /* SnoitcaPirt */,
 				8227094025BC2D4300CE1BFF /* SnoitcaPirtTests */,
-				8227094B25BC2D4300CE1BFF /* SnoitcaPirtUITests */,
 				8227092D25BC2D4100CE1BFF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,7 +84,6 @@
 			children = (
 				8227092C25BC2D4100CE1BFF /* SnoitcaPirt.app */,
 				8227093D25BC2D4300CE1BFF /* SnoitcaPirtTests.xctest */,
-				8227094825BC2D4300CE1BFF /* SnoitcaPirtUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +91,7 @@
 		8227092E25BC2D4100CE1BFF /* SnoitcaPirt */ = {
 			isa = PBXGroup;
 			children = (
+				8227098225BC33CC00CE1BFF /* DataSource */,
 				8227096B25BC316100CE1BFF /* Network */,
 				8227095D25BC2D5500CE1BFF /* Models */,
 				8227092F25BC2D4100CE1BFF /* SnoitcaPirtApp.swift */,
@@ -127,19 +114,11 @@
 		8227094025BC2D4300CE1BFF /* SnoitcaPirtTests */ = {
 			isa = PBXGroup;
 			children = (
-				8227094125BC2D4300CE1BFF /* SnoitcaPirtTests.swift */,
 				8227094325BC2D4300CE1BFF /* Info.plist */,
+				8227098B25BC3BCC00CE1BFF /* ArticlesTests.swift */,
+				8227099025BC3BEC00CE1BFF /* TestHelpers.swift */,
 			);
 			path = SnoitcaPirtTests;
-			sourceTree = "<group>";
-		};
-		8227094B25BC2D4300CE1BFF /* SnoitcaPirtUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8227094C25BC2D4300CE1BFF /* SnoitcaPirtUITests.swift */,
-				8227094E25BC2D4300CE1BFF /* Info.plist */,
-			);
-			path = SnoitcaPirtUITests;
 			sourceTree = "<group>";
 		};
 		8227095D25BC2D5500CE1BFF /* Models */ = {
@@ -159,6 +138,14 @@
 				8227097925BC327000CE1BFF /* ArticleSearchResource.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		8227098225BC33CC00CE1BFF /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				8227098325BC33F200CE1BFF /* Articles.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,24 +186,6 @@
 			productReference = 8227093D25BC2D4300CE1BFF /* SnoitcaPirtTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8227094725BC2D4300CE1BFF /* SnoitcaPirtUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8227095725BC2D4300CE1BFF /* Build configuration list for PBXNativeTarget "SnoitcaPirtUITests" */;
-			buildPhases = (
-				8227094425BC2D4300CE1BFF /* Sources */,
-				8227094525BC2D4300CE1BFF /* Frameworks */,
-				8227094625BC2D4300CE1BFF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8227094A25BC2D4300CE1BFF /* PBXTargetDependency */,
-			);
-			name = SnoitcaPirtUITests;
-			productName = SnoitcaPirtUITests;
-			productReference = 8227094825BC2D4300CE1BFF /* SnoitcaPirtUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,10 +199,6 @@
 						CreatedOnToolsVersion = 12.2;
 					};
 					8227093C25BC2D4300CE1BFF = {
-						CreatedOnToolsVersion = 12.2;
-						TestTargetID = 8227092B25BC2D4100CE1BFF;
-					};
-					8227094725BC2D4300CE1BFF = {
 						CreatedOnToolsVersion = 12.2;
 						TestTargetID = 8227092B25BC2D4100CE1BFF;
 					};
@@ -254,7 +219,6 @@
 			targets = (
 				8227092B25BC2D4100CE1BFF /* SnoitcaPirt */,
 				8227093C25BC2D4300CE1BFF /* SnoitcaPirtTests */,
-				8227094725BC2D4300CE1BFF /* SnoitcaPirtUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -276,13 +240,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8227094625BC2D4300CE1BFF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -290,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8227098425BC33F200CE1BFF /* Articles.swift in Sources */,
 				8227096D25BC316B00CE1BFF /* Network.swift in Sources */,
 				8227096725BC2DC700CE1BFF /* Article.swift in Sources */,
 				8227097A25BC327000CE1BFF /* ArticleSearchResource.swift in Sources */,
@@ -304,15 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8227094225BC2D4300CE1BFF /* SnoitcaPirtTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8227094425BC2D4300CE1BFF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8227094D25BC2D4300CE1BFF /* SnoitcaPirtUITests.swift in Sources */,
+				8227098C25BC3BCC00CE1BFF /* ArticlesTests.swift in Sources */,
+				8227099125BC3BEC00CE1BFF /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,11 +274,6 @@
 			isa = PBXTargetDependency;
 			target = 8227092B25BC2D4100CE1BFF /* SnoitcaPirt */;
 			targetProxy = 8227093E25BC2D4300CE1BFF /* PBXContainerItemProxy */;
-		};
-		8227094A25BC2D4300CE1BFF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8227092B25BC2D4100CE1BFF /* SnoitcaPirt */;
-			targetProxy = 8227094925BC2D4300CE1BFF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -536,46 +482,6 @@
 			};
 			name = Release;
 		};
-		8227095825BC2D4300CE1BFF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AF3826P4Z5;
-				INFOPLIST_FILE = SnoitcaPirtUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuriizadoianchuk.SnoitcaPirtUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SnoitcaPirt;
-			};
-			name = Debug;
-		};
-		8227095925BC2D4300CE1BFF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AF3826P4Z5;
-				INFOPLIST_FILE = SnoitcaPirtUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuriizadoianchuk.SnoitcaPirtUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SnoitcaPirt;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -602,15 +508,6 @@
 			buildConfigurations = (
 				8227095525BC2D4300CE1BFF /* Debug */,
 				8227095625BC2D4300CE1BFF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8227095725BC2D4300CE1BFF /* Build configuration list for PBXNativeTarget "SnoitcaPirtUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8227095825BC2D4300CE1BFF /* Debug */,
-				8227095925BC2D4300CE1BFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,13 +8,14 @@
 import Foundation
 import Combine
 
-enum Errors: Error {
+enum NError: Error {
     case URLError(Error)
     case parsingError
     case urlBuildFailed
 }
 
-typealias NResult<T> = Result<T, Errors>
+typealias NResult<T> = Result<T, Error>
+typealias NPublisher<T> = AnyPublisher<NResult<T>, Never>
 typealias NJust<T> = Just<NResult<T>>
 
 class Network {
@@ -25,7 +26,7 @@ class Network {
     init(
         host: URL,
         scheme: Scheme = .http,
-        staticQuery: [URLQueryItem]
+        staticQuery: [URLQueryItem] = []
     ) {
         self.host = host
         self.scheme = scheme
@@ -36,16 +37,16 @@ class Network {
         r.buildUrlRequest(scheme: scheme, host: host.absoluteString, staticQuery: staticQuery)
     }
 
-    func load<T>(resource r: Resource) -> AnyPublisher<NResult<T>, Never> where T : Decodable {
+    func load<T>(resource r: Resource) -> NPublisher<T> where T : Decodable {
         guard let request = buildRequest(resource: r) else {
-            return Just<NResult<T>>(.failure(.urlBuildFailed)).eraseToAnyPublisher()
+            return Just<NResult<T>>(.failure(NError.urlBuildFailed)).eraseToAnyPublisher()
         }
 
         return URLSession.shared.dataTaskPublisher(for: request)
             .map(\.data)
             .decode(type: T.self, decoder: JSONDecoder())
             .map(Result.success)
-            .catch { NJust<T>(.failure(.URLError($0))).eraseToAnyPublisher() }
+            .catch { NJust<T>(.failure(NError.URLError($0))).eraseToAnyPublisher() }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }

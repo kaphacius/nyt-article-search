@@ -8,6 +8,7 @@
 import Foundation
 
 struct Article: Decodable {
+
     enum CodingKeys: String, CodingKey {
         case webUrl = "web_url"
         case headline
@@ -18,6 +19,12 @@ struct Article: Decodable {
     let headline: String
     let webUrl: String
     let thumbnailUrl: String?
+
+    internal init(headline: String, webUrl: String, thumbnailUrl: String?) {
+        self.headline = headline
+        self.webUrl = webUrl
+        self.thumbnailUrl = thumbnailUrl
+    }
 
     init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
