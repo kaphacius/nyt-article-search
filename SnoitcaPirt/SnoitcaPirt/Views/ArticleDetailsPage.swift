@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
-import WebKit
 
 struct ArticleDetailsPage: View {
+    @State var presentingShareSheet: Bool = false
+
     let vm: ArticleVM
     var body: some View {
         VStack {
@@ -21,32 +22,16 @@ struct ArticleDetailsPage: View {
                     HStack {
                         Image(systemName: "square.and.arrow.up")
                     }
-                })
+                }).sheet(
+                    isPresented: $presentingShareSheet,
+                    content: {
+                        ActivityView(toShare: vm.url)
+                    }
+                )
         )
     }
 
     func onShare() {
-
-    }
-}
-
-final class WebViewWrapper: NSObject, UIViewRepresentable {
-    private let url: URL?
-
-    init(url: URL?) {
-        self.url = url
-    }
-
-    func makeUIView(context: Context) -> WKWebView {
-        WKWebView()
-    }
-
-    func updateUIView(
-        _ webView: WKWebView,
-        context: UIViewRepresentableContext<WebViewWrapper>
-    ) {
-        _ = url
-            .map { URLRequest(url: $0) }
-            .map(webView.load)
+        presentingShareSheet = true
     }
 }

@@ -32,7 +32,7 @@ struct ArticleList: View {
                 }
             }
             .animation(.none)
-            .navigationTitle("New York Times article search")
+            .navigationTitle("New York Times")
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 
@@ -54,10 +54,10 @@ struct ArticleList_Previews: PreviewProvider {
         let vm = ArticleListVM(dataSource: Articles(network: Network(host: URL(string: "localhost")!)))
         vm.query = "elections"
         vm.articles = [
-            ArticleVM(article: Article(headline: "Headline", webUrl: String(), thumbnailUrl: nil)),
-            ArticleVM(article: Article(headline: "Longer Headline", webUrl: String(), thumbnailUrl: nil)),
-            ArticleVM(article: Article(headline: "Super Long Headline", webUrl: String(), thumbnailUrl: nil))
-        ]
+            ArticleVM(article: Article(headline: "Headline", webUrl: String(), thumbnailUrl: "localhost")),
+            ArticleVM(article: Article(headline: "Longer Headline", webUrl: String(), thumbnailUrl: "localhost")),
+            ArticleVM(article: Article(headline: "Super Long Headline", webUrl: String(), thumbnailUrl: "localhost"))
+        ].compactMap({ $0 })
         return vm
     }()
 

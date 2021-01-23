@@ -10,13 +10,17 @@ import Combine
 
 struct ArticleVM: Identifiable, Equatable {
     let headline: String
-    let url: URL?
+    let url: URL
     let id: String
 
-    init(article: Article) {
+    init?(article: Article) {
+        guard let url = URL(string: article.webUrl) else {
+            return nil
+        }
+
         self.headline = article.headline
         self.id = article.id
-        self.url = URL(string: article.webUrl)
+        self.url = url
     }
 }
 
@@ -82,9 +86,9 @@ class ArticleListVM: ObservableObject {
     private func searchResponseReceived(_ result: NResult<Array<Article>>) {
         switch result {
         case .success(let nextPage) where isLoadingNextPage:
-            articles.append(contentsOf: nextPage.map(ArticleVM.init))
+            articles.append(contentsOf: nextPage.compactMap(ArticleVM.init))
         case .success(let new):
-            articles = new.map(ArticleVM.init)
+            articles = new.compactMap(ArticleVM.init)
         case .failure(let error):
             errorMessage = error.localizedDescription
         }
