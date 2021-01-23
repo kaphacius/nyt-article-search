@@ -23,10 +23,28 @@ struct ArticleList: View {
                         selection: $selectedIdx
                     ) {
                         Text(article.headline)
-                    }
+                    }.onAppear(perform: {
+                        vm.loadNextIfNeeded(for: article)
+                    })
+                }
+                if vm.isLoading {
+                    loadingIndicator
                 }
             }
+            .animation(.none)
+            .navigationTitle("New York Times article search")
         }.navigationViewStyle(StackNavigationViewStyle())
+    }
+
+    var loadingIndicator: some View {
+        HStack(alignment: .center) {
+            Spacer()
+            Text("Loading results")
+                .font(.title2)
+                .padding(.trailing)
+            ProgressView().progressViewStyle(CircularProgressViewStyle())
+            Spacer()
+        }
     }
 }
 
