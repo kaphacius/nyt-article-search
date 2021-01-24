@@ -25,9 +25,6 @@ struct ArticleList: View {
             }
             .animation(.none)
             .navigationTitle("New York Times")
-            .onAppear {
-                vm.query = "Hoboken"
-            }
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 
