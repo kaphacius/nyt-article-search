@@ -18,11 +18,14 @@ struct SnoitcaPirtApp: App {
         return nytNetwork
     }()
 
+    let images: Images = Images(baseUrl: URL(string: "nyt.com")!)
+
     var body: some Scene {
         WindowGroup {
             ArticleList(
                 vm: ArticleListVM(
-                    dataSource: Articles(network: network)
+                    dataSource: Articles(network: network),
+                    images: images
                 )
             )
         }

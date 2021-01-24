@@ -53,6 +53,15 @@ class MockArticles: Articles {
     }
 }
 
+class MockImages: Images {
+    init() {
+        super.init(baseUrl: URL(string: "localhost")!)
+    }
+
+    override subscript(key: String) -> UIImage? { UIImage() }
+    override func loadImage(at path: String, for id: String) { }
+}
+
 extension XCTest {
     func expectToEventually(
         _ test: @autoclosure () -> Bool,
@@ -83,5 +92,5 @@ func articlesResponse(hits: Int = 0, offset: Int = 0) -> NYTResponse<Article> {
 }
 
 var mockArticle: Article {
-    Article(headline: "foo", webUrl: "bar", thumbnailUrl: "baz")
+    Article(headline: "foo", webUrl: "bar", leadParagraph: "paragraph", thumbnailUrl: "baz")
 }

@@ -16,18 +16,19 @@ struct ArticleDetailsPage: View {
             WebViewWrapper(url: vm.url)
         }
         .navigationBarTitle("Article details")
-        .navigationBarItems(
-            trailing:
-                Button(action: onShare, label: {
-                    HStack {
-                        Image(systemName: "square.and.arrow.up")
-                    }
-                }).sheet(
-                    isPresented: $presentingShareSheet,
-                    content: {
-                        ActivityView(toShare: vm.url)
-                    }
-                )
+        .navigationBarItems(trailing: shareButton)
+    }
+
+    var shareButton: some View {
+        Button(action: onShare, label: {
+            HStack {
+                Image(systemName: "square.and.arrow.up")
+            }
+        }).sheet(
+            isPresented: $presentingShareSheet,
+            content: {
+                ActivityView(toShare: vm.url)
+            }
         )
     }
 

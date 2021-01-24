@@ -10,6 +10,7 @@ import XCTest
 
 class ArticleListVMTests: XCTestCase {
     var ma: MockArticles!
+    var mi: MockImages!
     var query: String!
 
     override func setUpWithError() throws {
@@ -19,6 +20,8 @@ class ArticleListVMTests: XCTestCase {
             )
         )
 
+        mi = MockImages()
+
         query = "query"
     }
 
@@ -27,7 +30,7 @@ class ArticleListVMTests: XCTestCase {
     }
 
     func testSimpleSearch() {
-        let sut = ArticleListVM(dataSource: ma)
+        let sut = ArticleListVM(dataSource: ma, images: mi)
         sut.query = query
 
         expectToEventually(
@@ -39,7 +42,7 @@ class ArticleListVMTests: XCTestCase {
     }
 
     func testInputSearch() {
-        let sut = ArticleListVM(dataSource: ma)
+        let sut = ArticleListVM(dataSource: ma, images: mi)
         sut.query = String(query.prefix(1))
         sut.query = String(query.prefix(2))
         sut.query = String(query.prefix(3))
@@ -62,7 +65,7 @@ class ArticleListVMTests: XCTestCase {
     }
 
     func testRequestNextPage() {
-        let sut = ArticleListVM(dataSource: ma)
+        let sut = ArticleListVM(dataSource: ma, images: mi)
         sut.query = query
 
         expectToEventually(
